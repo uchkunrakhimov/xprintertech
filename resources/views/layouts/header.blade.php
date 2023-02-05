@@ -13,7 +13,7 @@
             </div>
         </button>
 
-        
+
         <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -70,7 +70,7 @@
                     </ul>
                 </li>
                 <li class="nav-item" id="changeTheme">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-sun-bright"></i></a>
+                    <a class="nav-link" href="#" id="theme-toggle"><i class="fa-solid fa-sun-bright"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link border rounded-2 bg-gradient-info dark-text-dark" href="tel:+8613910998888">

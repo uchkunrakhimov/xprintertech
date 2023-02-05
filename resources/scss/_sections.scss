@@ -31,6 +31,7 @@
                     max-height: 100%;
                     max-width: 100%;
                     transition: $transition;
+                    border-radius: 12px;
                 }
             }
             .card-product-info {
@@ -83,6 +84,11 @@
             .xactive {
                 border-color: $color_7;
                 border-width: 2px;
+            }
+        }
+        .zoomSlider {
+            .swiper-slide {
+                width: auto;
             }
         }
     }

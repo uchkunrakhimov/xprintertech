@@ -258,26 +258,21 @@
         img {
             opacity: 0.5;
         }
-
-        .card-body {
-            background: $color_1;
-        }
     }
 
     .card {
         border-color: $color_2;
         .font-2xl {
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 600;
         }
-        .bg-blue-300 {
-            background-color: $color_9;
+
+        img {
+            border-radius: 12px;
         }
 
         .card-body {
             padding: 8px 0;
-            border-top-right-radius: 8px;
-            border-top-left-radius: 8px;
         }
     }
 }
@@ -286,7 +281,6 @@
 .services-component {
     h1 {
         text-align: $center;
-        font-weight: 600;
         position: relative;
         margin-bottom: 2rem;
     }
@@ -358,9 +352,6 @@
                 color: $color_2;
             }
         }
-    }
-    .title {
-        font-weight: 700;
     }
     .description {
         color: $color_6;

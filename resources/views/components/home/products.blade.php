@@ -10,7 +10,7 @@
             <a href="{{ route('product-detail')}}">
                 <div class="card">
                     <img src="{{ asset('img/products/1.jpg') }}" class="card-img-top" alt="Image not found">
-                    <div class="card-body bg-blue-300">
+                    <div class="card-body">
                         <p class="card-text text-center font-2xl">XP-Q302F</p>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ class RouterController extends Controller
     public function home()
     {
 
-        return view('app');
+        return view('pages.home');
     }
 
     public function drivers()
@@ -37,7 +37,7 @@ class RouterController extends Controller
         return view('pages.news');
     }
 
-    public function products_detail()
+    public function product_detail()
     {
 
         return view('pages.product-detail');

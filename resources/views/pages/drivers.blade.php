@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('app')
 @section('title', 'Xprinter - Drivers')
 @section('content')
     <section class="drivers-section">

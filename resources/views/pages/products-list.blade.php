@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('app')
 @section('title', 'Xprinter - Products')
 @section('content')
    <section class="product-section">
@@ -104,7 +104,7 @@
                                         <img src="{{ asset('img/products/1.jpg') }}" alt="1">
                                     </div>
                                     <figcaption class="card-product-info">
-                                        <p href="" class="title">XP-54i6</p>
+                                        <p href="" class="title">XP-Q302F</p>
                                     </figcaption>
                                 </a>
                             </div>

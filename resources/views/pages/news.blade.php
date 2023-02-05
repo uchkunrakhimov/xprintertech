@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('app')
 @section('title', 'Xprinter - News')
 @section('content')
     <section class="news-section">
@@ -11,7 +11,7 @@
                     <p class="subtitle opacity-75 text-link">2020-04-22</p>
                     <div>
                         <img class="img-thumbnail"
-                            src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/15875244425612.jpg"
+                            src="{{ asset('img/news/1.jpg') }}"
                             alt="Image not found">
                     </div>
                     <p class="description mt-3 font-500">
@@ -30,23 +30,16 @@
                 <div class="col-md-none col-lg-4 col-xl-4 col-xxl-4 global-card">
                     <div class="card">
                         <h4 class="card-title text-center mt-3">Related News</h4>
+                        @for ($i = 0; $i < 2; $i++)
                         <a href="1" class="recently-products">
                             <img class="img-thumbnail"
-                                src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/15791695995757.jpg?imageView2/2/w/930/q/75/format/webp"
+                                src="{{ asset('img/news/2.jpg') }}"
                                 class="card-img-top" alt="">
                             <div class="card-body">
                                 <p class="card-title text-center font-500">Great Success on Computex 2019</p>
                             </div>
                         </a>
-                        <a href="2" class="recently-products">
-                            <img class="img-thumbnail"
-                                src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/15887281124375.jpg?imageView2/2/w/930/q/75/format/webp"
-                                class="card-img-top" alt="">
-                            <div class="card-body">
-                                <p class="card-title text-center font-500">New Retail Trend Driving Our Innovations in
-                                    Euroshop 2020</p>
-                            </div>
-                        </a>
+                        @endfor
                     </div>
                 </div>
             </div>

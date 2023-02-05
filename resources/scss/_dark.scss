@@ -21,6 +21,13 @@ body[data-theme="dark"] {
     .dropdown-menu {
         background: $color_4;
         border: 1px solid $color_2;
+
+        li {
+            .dropdown-item:hover {
+                background: $color_2;
+                color: $color_4;
+            }
+        }
     }
 
     .dropdown-item {
@@ -67,6 +74,26 @@ body[data-theme="dark"] {
     .global-pagination {
         .pagination {
             .page-item {
+                &.disabled:hover {
+                    .page-link {
+                        background: $color_4;
+                        color: $color_2;
+                    }
+                }
+                &.active {
+                    .page-link {
+                        background: $color_2;
+                        color: $color_4;
+                        border-color: $color_2;
+                    }
+                }
+                &:hover {
+                    .page-link {
+                        background: $color_2;
+                        color: $color_4;
+                        border-color: $color_2;
+                    }
+                }
                 .page-link {
                     background: $color_4;
                     color: $color_2;
@@ -99,6 +126,10 @@ body[data-theme="dark"] {
         .nav-url {
             a, i {
                 color: $color_2;
+            }
+
+            a:hover {
+                color: $color_5;
             }
         }
     }
@@ -173,5 +204,44 @@ body[data-theme="dark"] {
         .swiper-button-next {
             background: $color_4;
         }
+    }
+
+    .drivers-section {
+        .card {
+            .card-text {
+                color: $color_2;
+            }
+
+            .view {
+                img {
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+
+    .global-card {
+        .card {
+            .card-title {
+                color: $color_2;
+            }
+            .recently-products {
+                border-color: $color_4;
+                background: $color_4;
+                img {
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+
+    .xzoom-container {
+        .xzoom-thumbs {
+            background: $color_4;
+        }
+    }
+
+    table, thead, tbody, thead tr th, tbody tr td {
+        color: $color_2;
     }
 }

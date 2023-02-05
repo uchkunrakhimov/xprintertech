@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('app')
 @section('title', 'Xprinter - About')
 @section('content')
     <section class="about-section">

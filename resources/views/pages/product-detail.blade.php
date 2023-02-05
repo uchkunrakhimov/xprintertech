@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('app')
 @section('title', 'Xprinter - Product detail')
 @section('content')
     <section class="detail-section mt-5xl">
@@ -7,36 +7,37 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-4">
                     <div class="xzoom-container">
-                        <img class="xzoom" id="xzoom-default"
-                            src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683921858.jpg?imageView2/2/w/1920/q/75"
-                            xoriginal="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683921858.jpg?imageView2/2/w/1920/q/75"
-                            style="width: 400px" />
+                        <img class="xzoom" id="xzoom-default" src="{{ asset('img/products/1.jpg') }}"
+                            xoriginal="{{ asset('img/products/1.jpg') }}" style="width: 400px" />
                         <div class="xzoom-thumbs">
-                            <a
-                                href="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683921858.jpg?imageView2/2/w/1920/q/75"><img
-                                    class="xzoom-gallery" width="80"
-                                    src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683921858.jpg?imageView2/2/w/1920/q/75"
-                                    xpreview="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683921858.jpg?imageView2/2/w/1920/q/75"></a>
-
-                            <a
-                                href="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683936997.jpg?imageView2/2/w/1920/q/75"><img
-                                    class="xzoom-gallery" width="80"
-                                    src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683936997.jpg?imageView2/2/w/1920/q/75"></a>
-
-                            <a
-                                href="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683937361.jpg?imageView2/2/w/1920/q/75"><img
-                                    class="xzoom-gallery" width="80"
-                                    src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683937361.jpg?imageView2/2/w/1920/q/75"></a>
-
-                            <a
-                                href="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683937361.jpg?imageView2/2/w/1920/q/75"><img
-                                    class="xzoom-gallery" width="80"
-                                    src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683937361.jpg?imageView2/2/w/1920/q/75"></a>
-
-                            <a
-                                href="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683927389.jpg?imageView2/2/w/1920/q/75"><img
-                                    class="xzoom-gallery" width="80"
-                                    src="https://img5541.weyesimg.com/uploads/www.xprintertech.com/images/16655683927389.jpg?imageView2/2/w/1920/q/75"></a>
+                            {{-- @for ($i = 0; $i < 5; $i++)
+                                <a href="{{ asset('img/products/1.jpg') }}">
+                                    <img class="xzoom-gallery"
+                                        width="80" src="{{ asset('img/products/1.jpg') }}"
+                                        xpreview="{{ asset('img/products/1.jpg') }}" />
+                                </a>
+                            @endfor --}}
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <a href="{{ asset('img/products/1.jpg') }}" class="carousel-item active">
+                                        <img src="{{ asset('img/products/1.jpg') }}" xpreview="{{ asset('img/products/1.jpg') }}" class="xzoom-gallery" alt="...">
+                                    @for ($i = 0; $i < 4; $i++)
+                                        <a href="{{ asset('img/products/1.jpg') }}" class="carousel-item">
+                                            <img src="{{ asset('img/products/1.jpg') }}" xpreview="{{ asset('img/products/1.jpg') }}" class="xzoom-gallery" alt="...">
+                                        </a>
+                                    @endfor
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +184,8 @@
                                                     <td height="28" width="8">Media
                                                         type</td>
                                                     <td colspan="2" width="958">
-                                                        <p>Thermal roll paper, thermal adhesive paper,linerless label paper</p>
+                                                        <p>Thermal roll paper, thermal adhesive paper,linerless label paper
+                                                        </p>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -199,7 +201,8 @@
                                                     <td colspan="1" rowspan="1" width="534">
                                                         <p>0.06 ~ 0.19 mm</p>
                                                     </td>
-                                                    <td rowspan="1" valign="null" align="null" width="423">0.06 ~
+                                                    <td rowspan="1" valign="null" align="null" width="423">0.06
+                                                        ~
                                                         0.08 mm
                                                     </td>
                                                 </tr>
@@ -211,7 +214,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td height="16" rowspan="1" width="8">Paper taken method</td>
+                                                    <td height="16" rowspan="1" width="8">Paper taken method
+                                                    </td>
                                                     <td colspan="2" rowspan="1" width="958">
                                                         <p>Tearing off</p>
                                                     </td>
@@ -264,7 +268,8 @@
                                                     </td>
                                                     <td width="24" style="word-break: break-all;">
                                                         <p>UPC-A/UPC-E/JAN13(EAN13)/</p>
-                                                        <p>JAN8(EAN8)/<span style="background-color: transparent;"></span><span
+                                                        <p>JAN8(EAN8)/<span
+                                                                style="background-color: transparent;"></span><span
                                                                 style="background-color: transparent;">CODE39/</span><span
                                                                 style="background-color: transparent;">ITF/</span></p>
                                                         <p><span
@@ -276,11 +281,13 @@
                                                     <td height="28" width="8">2D bar code</td>
                                                     <td width="534" style="word-break: break-all;">PDF417 /
                                                         QRCODE&nbsp;/&nbsp;DataMatrix</td>
-                                                    <td width="24" style="word-break: break-all;">PDF417&nbsp;/&nbsp;QR
+                                                    <td width="24" style="word-break: break-all;">
+                                                        PDF417&nbsp;/&nbsp;QR
                                                         code</td>
                                                 </tr>
                                                 <tr>
-                                                    <td height="19" colspan="1" rowspan="1" width="8">Emulaion
+                                                    <td height="19" colspan="1" rowspan="1" width="8">
+                                                        Emulaion
                                                     </td>
                                                     <td colspan="2" rowspan="1" style="word-break: break-all;"
                                                         width="939">
@@ -367,90 +374,68 @@
                                 <div class="card card-body">
                                     <h2>Service and Support</h2>
                                     <div class="row no-border mt-3">
-                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers,
-                                                        Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
+                                        @for ($i = 0; $i < 2; $i++)
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Q:What’s your main product line?</h5>
+                                                        <p class="card-text">A:Specialized in Receipt printers, Label
+                                                            Printers,
+                                                            Mobile
+                                                            Printers,
+                                                            Panel
+                                                            printers, Kiosk printer, Dot Matrix Printer , Bluetooth
+                                                            printers.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Q:What’s your main product line?</h5>
+                                                        <p class="card-text">A:Specialized in Receipt printers, Label
+                                                            Printers,
+                                                            Mobile
+                                                            Printers,
+                                                            Panel
+                                                            printers, Kiosk printer, Dot Matrix Printer , Bluetooth
+                                                            printers.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Q:What’s your main product line?</h5>
+                                                        <p class="card-text">A:Specialized in Receipt printers, Label
+                                                            Printers,
+                                                            Mobile
+                                                            Printers,
+                                                            Panel
+                                                            printers, Kiosk printer, Dot Matrix Printer , Bluetooth
+                                                            printers.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers,
-                                                        Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers,
-                                                        Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers, Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers, Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Q:What’s your main product line?</h5>
-                                                    <p class="card-text">A:Specialized in Receipt printers, Label Printers,
-                                                        Mobile
-                                                        Printers, Panel
-                                                        printers, Kiosk printer, Dot Matrix Printer , Bluetooth printers.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endfor
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-none col-lg-4 col-xl-4 col-xxl-4 global-card">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <h4 class="card-title text-center mt-3">Related Products</h4>
-                            <a href="1" class="recently-products">
-                                <img src="{{ asset('img/products/1.jpg') }}" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">XP-24354</h5>
-                                </div>
-                            </a>
-                            <a href="2" class="recently-products">
-                                <img src="{{ asset('img/products/1.jpg') }}" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">XP-24354</h5>
-                                </div>
-                            </a>
+                            @for ($i = 0; $i < 2; $i++)
+                                <a href="1" class="recently-products">
+                                    <img src="{{ asset('img/products/1.jpg') }}" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">XP-24354</h5>
+                                    </div>
+                                </a>
+                            @endfor
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-@endsection
+    @endsection
