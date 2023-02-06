@@ -12,6 +12,20 @@
 ### Mobile hamburger menu - triple action
 ![Mobile hamburger](./public/screens/mobile.png)
 
+### Footer
+![Home page](./public/screens/footer.png)
+
+
+## Dark theme
+
+### Dark home page
+![Home page](./public/screens/dark-home.png)
+
+### Dark popular products
+![Home page](./public/screens/dark-popular.png)
+
+
+
 ## Used
 
 - [Bootstrap](https://getbootstrap.com/) - The most popular HTML, CSS, and JS library in the world.
