@@ -1,6 +1,9 @@
 # Xprintertech the design was copied and updated
 
-
+![Home page](./public/screens/home.png)
+![Product detail](./public/screens/detail.png)
+![Product list](./public/screens/list.png)
+![Mobile hamburger](./public/screens/mobile.png)
 
 ## Used
 
