@@ -9,27 +9,26 @@
                     <div class="xzoom-container">
                         <img class="xzoom" id="xzoom-default" src="{{ asset('img/products/1.jpg') }}"
                             xoriginal="{{ asset('img/products/1.jpg') }}" style="width: 400px" />
-                        <div class="xzoom-thumbs">
-                            <div id="carouselExample" class="carousel slide">
-                                <div class="carousel-inner">
-                                    <a href="{{ asset('img/products/1.jpg') }}" class="carousel-item active">
-                                        <img src="{{ asset('img/products/1.jpg') }}" xpreview="{{ asset('img/products/1.jpg') }}" class="xzoom-gallery" alt="...">
-                                    @for ($i = 0; $i < 4; $i++)
-                                        <a href="{{ asset('img/products/1.jpg') }}" class="carousel-item">
-                                            <img src="{{ asset('img/products/1.jpg') }}" xpreview="{{ asset('img/products/1.jpg') }}" class="xzoom-gallery" alt="...">
+                        <div class="xzoom-thumbs min_wrap">
+                            <div class="swiper gallery-thumbs" id="detailSwiper">
+                                <div class="swiper-wrapper">
+                                    <a href="{{ asset('img/products/1.jpg') }}" class="swiper-slide">
+                                        <img src="{{ asset('img/products/1.jpg') }}"
+                                            xpreview="{{ asset('img/products/1.jpg') }}" class="xzoom-gallery"
+                                            alt="">
+                                    </a>
+                                    @for ($i = 0; $i < 10; $i++)
+                                        <a href="{{ asset('img/products/1.jpg') }}" class="swiper-slide">
+                                            <img src="{{ asset('img/products/1.jpg') }}"
+                                                xpreview="{{ asset('img/products/1.jpg') }}"
+                                                class="xzoom-gallery" alt="">
                                         </a>
                                     @endfor
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                                <div class="pagination-swiper d-flex justify-content-evenly">
+                                    <div class="fa-solid fa-chevron-left"></div>
+                                    <div class="fa-solid fa-chevron-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

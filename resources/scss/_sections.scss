@@ -144,6 +144,28 @@
         margin-bottom: 10px;
     }
 
+    .min_wrap {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .05);
+
+        .gallery-thumbs {
+            user-select: none;
+            width: 100%;
+            .swiper-wrapper {
+                width: 350px;
+            }
+            .pagination-swiper {
+                margin: 5px 0;
+                .swiper-button-disabled {
+                    opacity: .5;
+                }
+                .fa-solid {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
 }
 
 // News page

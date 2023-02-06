@@ -258,3 +258,15 @@ $('#changeTheme').click(function () {
         $('body').attr('data-theme', 'light');
     }
 })
+
+
+// Product detail swiper
+let detailSwiper = new Swiper("#detailSwiper", {
+    direction: "horizontal",
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    navigation: {
+        prevEl: ".fa-chevron-left",
+        nextEl: ".fa-chevron-right",
+    },
+});

@@ -244,4 +244,10 @@ body[data-theme="dark"] {
     table, thead, tbody, thead tr th, tbody tr td {
         color: $color_2;
     }
+
+    .pagination-swiper {
+        .fa-solid {
+            color: $color_2;
+        }
+    }
 }
