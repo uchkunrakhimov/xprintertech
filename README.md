@@ -1,8 +1,15 @@
 # Xprintertech the design was copied and updated
 
+### Home page
 ![Home page](./public/screens/home.png)
+
+### Product detail page
 ![Product detail](./public/screens/detail.png)
+
+### Product list
 ![Product list](./public/screens/list.png)
+
+### Mobile hamburger menu - triple action
 ![Mobile hamburger](./public/screens/mobile.png)
 
 ## Used
