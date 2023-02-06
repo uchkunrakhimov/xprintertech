@@ -10,13 +10,6 @@
                         <img class="xzoom" id="xzoom-default" src="{{ asset('img/products/1.jpg') }}"
                             xoriginal="{{ asset('img/products/1.jpg') }}" style="width: 400px" />
                         <div class="xzoom-thumbs">
-                            {{-- @for ($i = 0; $i < 5; $i++)
-                                <a href="{{ asset('img/products/1.jpg') }}">
-                                    <img class="xzoom-gallery"
-                                        width="80" src="{{ asset('img/products/1.jpg') }}"
-                                        xpreview="{{ asset('img/products/1.jpg') }}" />
-                                </a>
-                            @endfor --}}
                             <div id="carouselExample" class="carousel slide">
                                 <div class="carousel-inner">
                                     <a href="{{ asset('img/products/1.jpg') }}" class="carousel-item active">
