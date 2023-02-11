@@ -245,19 +245,33 @@ if (isTouchSupported) {
 
 
 
-$('#theme-toggle').html('<i class="fa-duotone fa-moon"></i>')
-$('#changeTheme').click(function () {
-    $('#theme-toggle').empty();
-    $('#theme-toggle').html('<i class="fa-solid fa-brightness"></i>')
+$('body').attr('data-theme', 'light');
+if($('body').attr('data-theme') == 'light') {
+    $("#theme-toggle").html('<i class="fa-solid fa-moon"></i>');
+}
 
-    if ($('body').attr('data-theme') == 'light') {
-        $('body').attr('data-theme', 'dark');
+$("#changeTheme").click(function () {
+    if ($("body").attr("data-theme") == "light") {
+        $("body").attr("data-theme", "dark");
+        $("#theme-toggle").html('<i class="fa-solid fa-brightness"></i>');
+        localStorage.setItem('dark', 'true');
     } else {
-        $('#theme-toggle').empty();
-        $('#theme-toggle').html('<i class="fa-duotone fa-moon"></i>')
-        $('body').attr('data-theme', 'light');
+        $("#theme-toggle").empty();
+        $("body").attr("data-theme", "light");
+        $("#theme-toggle").html('<i class="fa-solid fa-moon"></i>');
+        localStorage.setItem('dark', 'false');
     }
-})
+});
+
+if (localStorage.getItem('dark') == 'true') {
+    $("#theme-toggle").empty();
+    $("#theme-toggle").html('<i class="fa-solid fa-brightness"></i>');
+    $("body").attr("data-theme", "dark");
+} else {
+    $("#theme-toggle").empty();
+    $("#theme-toggle").html('<i class="fa-solid fa-moon"></i>');
+    $("body").attr("data-theme", "light");
+}
 
 
 // Product detail swiper
